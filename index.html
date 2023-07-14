@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Quantum</title>
+
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <nav>
+      <img  src="/assets/icons/logo used in header.svg" alt="" />
+    </nav>
+
+    <main>
+      <div class="login-card">
+        <div class="login-card--header"></div>
+        <form action="">
+          <div class="form-heading">
+            <img src="/assets/icons/back.svg" alt="" />
+            <h1>Log in with Quantum</h1>
+          </div>
+
+          <div class="radio-input">
+            <label>
+              <input type="radio" name="schoolType" checked>
+              <span>District</span>
+            </label>
+            <label>
+              <input type="radio" name="schoolType">
+              <span>Independent School</span>
+            </label>
+          </div>
+
+          <div class="login-card--input">
+            <p>State <sup>*</sup></p>
+            <select
+              name=""
+              id=""
+            >
+              <option value="option1">Option 1</option>
+            </select>
+          </div>
+
+          <div class="login-card--input">
+            <p >District <sup>*</sup></p>
+            <select
+              name=""
+              id=""
+            >
+              <option value="option1">Alabama School District</option>
+            </select>
+          </div>
+
+          <div class="login-card--input">
+            <input
+              type="text"
+              name=""
+              id=""
+              placeholder="Username/Email ID"
+            />
+            <p class="text-end text-green-dark font-bold">Forgot Username?</p>
+          </div>
+
+          <div class="login-card--input">
+            <div class="flex">
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="Password"
+              />
+              <img
+                src="/assets/icons/preview.svg"
+                alt=""
+                class="border-solid border-b-2 border-slate"
+              />
+            </div>
+            <p class="text-end text-green-dark font-bold">Forgot Password?</p>
+          </div>
+
+          <label class="remember-me">
+            <input type="checkbox" name="rememberMe">
+            <span>Remember Me</span>
+          </label>
+
+          <button class="login-btn ">
+            Login
+          </button>
+        </form>
+      </div>
+    </main>
+
+    <footer class="bg-[#E0E1E1] w-full h-10 flex items-center justify-center gap-5 ">
+      <img src="/assets/icons/logo used in footer.svg" alt="">
+      <span>|</span>
+      <span>Copyright &copy; 2020-2021</span>
+      <b>Zeus Systems Pvt Ltd</b>
+      <span>All rights reserved.</span>
+    </footer>
+
+    <script src="dist/index.js" type="text/javascript"></script>
+  </body>
+</html>

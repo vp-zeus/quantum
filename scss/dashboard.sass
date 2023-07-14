@@ -1,0 +1,197 @@
+// Variables
+$light-green: #8DDC97;
+$green: #3FD28B;
+$dark-green: #1F7A54;
+$gray: #6E6E6E
+$announcement-width: 350px
+
+// @keyframes fadeIn
+//     from
+//         height: 0px
+//     to
+//         overflow: hidden
+//         max-height: 
+.scrollbar
+    &::-webkit-scrollbar
+        width: 0.25rem
+    &::-webkit-scrollbar-thumb
+        border-radius: 2px
+        background: rgba(0,0 ,0 ,0.38 )
+.hidden
+    display: none
+
+nav
+    display: flex
+    height: 5rem
+    align-items: center
+    background: #25313F
+    
+    position: relative
+
+    img
+        margin-left: 2.5rem
+    
+
+.nav-links
+    display: none
+    align-items: center
+    justify-content: space-around
+    flex-basis: 50%
+    height: 100%
+    color: $light-green
+    margin-left: auto
+    cursor: pointer
+
+    li
+        height: 100%
+        display: flex
+        align-items: center
+
+.active-link
+    border-bottom: 5px solid #fff
+    color: #fff
+
+.actions
+    display: flex
+    justify-content: space-around
+    margin-right: 2rem
+    margin-left: auto
+    height: 100%
+    align-items: center
+    gap: 1rem
+
+
+.menu-container
+    cursor: pointer
+    position: relative
+    height: 100%
+    display: flex
+    align-items: center
+    &:hover
+        #navigation-menu
+            max-height: 999px
+        .announcement-container, .notification-container
+            max-height: 999px
+
+
+.dialog-box
+    background: #fff
+    position: absolute
+    top: 5rem
+    border-radius: 2px;
+    box-shadow: 0px 13px 20px #0000003D;
+
+#navigation-menu
+    right: 0
+    width: 280px
+    
+    overflow: hidden
+    max-height: 0
+    transition: max-height 0.5s
+    li
+        width: 100%
+        padding: 0.75rem
+        color: $dark-green
+        cursor: pointer
+    li:hover
+        background: #F3F3F3
+.announcement-container, .notification-container
+    right: 0
+    width: $announcement-width
+    overflow: hidden
+    transition: max-height 0.5s
+    max-height: 0
+    &--footer
+        display: flex
+        align-items: center
+        height: 50px
+        background: #FFFFFF
+        box-shadow: 0px 1px 6px #0000003D;
+        & > div
+            width: 50%
+            text-align: center
+            color: $dark-green
+
+        & span
+            width: 1px
+            height: 60%
+            background: #0000001F
+#announcement, #notification
+    font-size: 0.75rem
+    overflow-y: auto
+    max-height: 500px
+
+    li
+        padding: 1rem
+        border-bottom: 1px solid #EEEEEE
+        display: flex
+        flex-direction: column
+        gap: 0.5rem
+        .announcement
+
+            &--name
+                span:nth-child(2)
+                    font-weight: bold
+            &--msg
+                font-size: 0.9rem
+                font-weight: bold
+            &--details
+                color: $gray
+                & span:last-child
+                    float: right
+
+.notification-container--footer > div
+    width: 100%
+
+
+
+
+.card-container
+    display: grid
+    margin-top: 1.25rem
+    grid-auto-rows: max-content
+    grid-template-columns: 1fr
+    gap: 2rem
+
+
+.card
+    background: #ffffff
+    padding: 2.5rem 2.5rem 0 2.5rem
+    border-radius: 0.4rem
+    margin-bottom: 2.5rem
+
+    &-content
+        display: flex
+        gap: 2.5rem
+        margin-bottom: 0.75rem
+
+        & > div
+            display: flex
+            flex-direction: column
+            gap: 0.25rem
+            width: 100%
+            
+            
+            select
+                font-size: 1.125rem
+                line-height: 1.75rem
+                border-style: solid
+                border-bottom-width: 2px
+                margin-top: 0.75rem
+    
+
+@media (min-width: 1000px)
+    .card-container
+        grid-template-columns: repeat(2,minmax(0,1fr))
+
+    .card
+        padding: 1rem 1rem 0 1rem
+        margin-bottom: 1.5rem
+
+    .nav-links
+        display: flex
+    .actions
+        margin-left: 0
+
+        .menu-icon
+            display: none

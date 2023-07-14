@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <title>Quantum</title>
+
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Quicksand", "sans-serif"],
+            serif: ["Merriweather", "serif"],
+          },
+          colors: {
+            "green-light": "#8DDC97",
+            "green": "#3FD28B",
+            "green-dark": "#1F7A54",
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body>
+  <nav>
+    <!-- <img class="w-full" src="/assets/header pattern svg.svg" alt=""> -->
+    <img src="/assets/icons/logo used in header.svg" alt="" />
+
+    <ul class="nav-links">
+    </ul>
+    <div class="actions ">
+      <div class="menu-container">
+        <div class="relative">
+          <img src="/assets/icons/alerts.svg" alt="">
+          <span
+            id="notification-badge"
+            class="absolute bg-[#2A7FF3] p-1 rounded-full w-[15px] h-[15px] text-xs flex justify-center items-center text-white top-[-4px] right-[-4px]">2</span>
+        </div>
+        <div class="dialog-box notification-container">
+          <ul class="scrollbar" id="notification">
+          </ul>
+          <div class="notification-container--footer">
+            <div>Show All</div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-container">
+        <div class="relative">
+          <img src="/assets/icons/announcements.svg" alt="">
+          <span 
+            id="announcement-badge"
+            class="absolute bg-[#2A7FF3] p-1 rounded-full w-[15px] h-[15px] text-xs flex justify-center items-center text-white top-[-4px] right-[-8px]">1</span>
+        </div>
+        <div class="dialog-box announcement-container">
+          <ul class="scrollbar" id="announcement">
+          </ul>
+          <div class="announcement-container--footer">
+            <div>Show All</div>
+            <span></span>
+            <div>Create New</div>
+          </div>
+        </div>
+      </div>
+
+      <img src="/assets/icons/account_circle.svg" alt="">
+      <div class="menu-container" >
+        <img class="menu-icon" src="/assets/icons/hamburger-menu.svg" alt="">
+        <ul class="dialog-box" id="navigation-menu">
+        </ul>
+      </div>
+    </div>
+
+    
+  </nav>
+
+  <main class=" bg-[#EEEEEE]">
+    <div class="mx-auto w-4/5 pt-10 rounded-md">
+      <div class="bg-green-light text-lg h-20 w-full rounded-md flex">
+        <div class="w-1/2 flex items-center justify-center border-b-4 border-solid border-[#222222] h-full gap-5">
+          <img src="/assets/icons/courses.svg" alt="">
+          <span>
+            <b>4</b>
+            Courses
+          </span>
+        </div>
+        <div class="w-1/2 flex items-center justify-center  h-full gap-5">
+          <img src="/assets/icons/classes.svg" alt="">
+          <span>
+            <b>4</b>
+            Classes
+          </span>
+        </div>
+      </div>
+
+      <div class="mt-5 min-h-[80px] flex justify-between pb-5 border-solid border-b-2 border-slate">
+        <p class="self-end text-slate text-sm">Showing 4 of 4 courses</p>
+        <div class="flex gap-5 justify-center items-start">
+          <span>Sort by:</span>
+          <select name="" id="" class="w-40 bg-inherit border-solid border-b-2 border-slate">
+            <option value="Course Name">Course Name</option>
+          </select>
+          <img src="/assets/icons/sort.svg" alt="">
+        </div>
+      </div>
+
+      <div class="card-container">
+        <!-- <div class="card">
+            <div class="card-content flex gap-10 mb-3">
+              <img class="thumbnail"  src="/assets/images/imageMask-1.svg" alt="">
+                <div>
+                  <div class="flex justify-between">
+                    <span  class="title-text text-2xl">Acceleration</span>
+                    <img src="/assets/icons/favourite.svg" alt="">
+                  </div>
+                  <div class="text-sm text-slate-600">
+                    <span>Physics |</span>
+                    <span>Grade 7 +2</span>
+                  </div>
+                  <div class="flex gap-4 text-sm text-slate-600">
+                    <span>
+                      <b>4</b>
+                      Units
+                    </span>
+                    <span>
+                      <b>18</b>
+                      Lessons
+                    </span>
+                    <span>
+                      <b>20</b>
+                      Topics
+                    </span>
+                  </div>
+                  <select name="" id="" >
+                    <option value="classb">Mr. Frank's Class B</option>
+                    <option value="classa">Mr. Frank's Class A</option>
+                    <option value="all">All Classes</option>
+                  </select>
+                  <div class="text-sm text-slate-500 mt-2">
+                    <span>50 students  |</span>
+                    <span>   21-Jan-2020 - 21-Aug-2020</span>
+                  </div>
+                </div>
+            </div>
+            <hr/>
+            <div class="flex justify-between p-5">
+              <img src="/assets/icons/preview.svg" alt="">
+              <img src="/assets/icons/manage course.svg" alt="">
+              <img src="/assets/icons/grade submissions.svg" alt="">
+              <img src="/assets/icons/reports.svg" alt="">
+            </div>
+          </div>
+
+          <div class="bg-white px-10 rounded-md pt-10 max-w-2xl mb-10">
+            <div class="flex gap-10 mb-3">
+              <img src="/assets/images/imageMask-2.svg" alt="">
+                <div class="flex flex-col gap-1 w-full">
+                  <div class="flex justify-between">
+                    <span class="text-2xl">Displacement, Velocity and Speed</span>
+                    <img src="/assets/icons/favourite.svg" alt="">
+                  </div>
+                  <div class="text-sm text-slate-600">
+                    <span>Physics |</span>
+                    <span>Grade 6 +3</span>
+                  </div>
+                  <div class="flex gap-4 text-sm text-slate-600">
+                    <span>
+                      <b>2</b>
+                      Units
+                    </span>
+                    <span>
+                      <b>15</b>
+                      Lessons
+                    </span>
+                    <span>
+                      <b>20</b>
+                      Topics
+                    </span>
+                  </div>
+                  <select name="" id="" class="mt-3 border-solid border-b-2 border-slate text-lg opacity-[50%]">
+                    <option value="classb">No Classes</option>
+                    <option value="classb">Mr. Frank's Class B</option>
+                    <option value="classa">Mr. Frank's Class A</option>
+                    <option value="all">All Classes</option>
+                  </select>
+                  
+
+                </div>
+            </div>
+            <hr/>
+            <div class="flex justify-between p-5">
+              <img src="/assets/icons/preview.svg" alt="">
+              <img class="opacity-[40%]" src="/assets/icons/manage course.svg" alt="">
+              <img class="opacity-[40%]" src="/assets/icons/grade submissions.svg" alt="">
+              <img src="/assets/icons/reports.svg" alt="">
+            </div>
+          </div>
+
+          <div class="bg-white px-10 rounded-md pt-10 max-w-2xl mb-10">
+            <div class="flex gap-10 mb-3">
+              <img src="/assets/images/imageMask.svg" alt="">
+                <div class="flex flex-col gap-1 w-full">
+                  <div class="flex justify-between">
+                    <span class="text-2xl">Introduction to Biology: Micro organisms and how they affec...</span>
+                    <img src="/assets/icons/favourite.svg" alt="">
+                  </div>
+                  <div class="text-sm text-slate-600">
+                    <span>Biology |</span>
+                    <span>Grade 4 +1</span>
+                  </div>
+                  <div class="flex gap-4 text-sm text-slate-600">
+                    <span>
+                      <b>5</b>
+                      Units
+                    </span>
+                    <span>
+                      <b>16</b>
+                      Lessons
+                    </span>
+                    <span>
+                      <b>22</b>
+                      Topics
+                    </span>
+                  </div>
+                  <select name="" id="" class="mt-3 border-solid border-b-2 border-slate text-lg">
+                    <option value="all">All Classes</option>
+                    <option value="classb">Mr. Frank's Class B</option>
+                    <option value="classa">Mr. Frank's Class A</option>
+                  </select>
+                  <div class="text-sm text-slate-500 mt-2">
+                    <span>300 students</span>
+                  </div>
+                </div>
+            </div>
+            <hr/>
+            <div class="flex justify-between p-5">
+              <img src="/assets/icons/preview.svg" alt="">
+              <img class="opacity-[50%]" src="/assets/icons/manage course.svg" alt="">
+              <img class="opacity-[50%]" src="/assets/icons/grade submissions.svg" alt="">
+              <img src="/assets/icons/reports.svg" alt="">
+            </div>
+          </div>
+
+          <div class="bg-white px-10 rounded-md pt-10 max-w-2xl mb-10">
+            <div class="flex gap-10 mb-3">
+              <img src="/assets/images/imageMask-3.svg" alt="">
+                <div class="flex flex-col gap-1 w-full">
+                  <div class="flex justify-between">
+                    <span class="text-2xl">Introduction to High School Mathematics</span>
+                    <img src="/assets/icons/favourite.svg" class="max-h-[40px]" alt="">
+                  </div>
+                  <div class="text-sm text-slate-600">
+                    <span>Mathematics|</span>
+                    <span>Grade 8 +3</span>
+                  </div>
+                  
+                  <select name="" id="" class="mt-3 border-solid border-b-2 border-slate text-lg">
+                    <option value="classa">Mr. Frank's Class A</option>
+                    <option value="classb">Mr. Frank's Class B</option>
+                    <option value="all">All Classes</option>
+                  </select>
+                  <div class="text-sm text-slate-500 mt-2">
+                    <span>44 students  |</span>
+                    <span>   14-Oct-2019 - 20-Oct-2020</span>
+                  </div>
+
+                </div>
+            </div>
+            <hr/>
+            <div class="flex justify-between p-5">
+              <img src="/assets/icons/preview.svg" alt="">
+              <img src="/assets/icons/manage course.svg" alt="">
+              <img src="/assets/icons/grade submissions.svg" alt="">
+              <img src="/assets/icons/reports.svg" alt="">
+            </div>
+          </div>
+        </div> -->
+      </div>
+  </main>
+
+  <footer class="bg-[#E0E1E1] w-full h-10 flex items-center justify-center gap-5 ">
+    <img src="/assets/icons/logo used in footer.svg" alt="">
+    <span>|</span>
+    <span>Copyright &copy; 2020-2021</span>
+    <b>Zeus Systems Pvt Ltd</b>
+    <span>All rights reserved.</span>
+  </footer>
+
+  <script src="dist/ts/dashboard.js"></script>
+</body>
+
+</html>

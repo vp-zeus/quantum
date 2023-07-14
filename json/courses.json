@@ -1,0 +1,72 @@
+[
+    {
+      "title": "Acceleration",
+      "img": "/assets/images/imageMask-1.svg",
+      "favourite": true,
+      "about": {
+        "subject": "Physics",
+        "grade": 7
+      },
+      "metrics": {
+        "units": 4,
+        "lessons": 18,
+        "topics": 24
+      },
+      "classDetails": {
+        "name": "Mr. Frank's Class A",
+        "numberOfStudents": 50,
+        "durationDate": "21-Jan-2020 - 21-Aug-2020"
+      }
+    },
+    {
+      "title": "Displacement, Velocity and Speed",
+      "img": "/assets/images/imageMask-2.svg",
+      "favourite": true,
+      "about": {
+        "subject": "Physics",
+        "grade": 6
+      },
+      "metrics": {
+        "units": 2,
+        "lessons": 15,
+        "topics": 20
+      }
+    },
+    {
+      "title": "Introduction to Biology: Micro organisms and how they affec...",
+      "img": "/assets/images/imageMask.svg",
+      "favourite": true,
+      "about": {
+        "subject": "Biology",
+        "grade": 4
+      },
+      "metrics": {
+        "units": 5,
+        "lessons": 16,
+        "topics": 22
+      },
+      "classDetails": {
+        "name": "All Classes",
+        "numberOfStudents": 300
+      }
+    },
+    {
+      "title": "Introduction to High School Mathematics",
+      "img": "/assets/images/imageMask-3.svg",
+      "favourite": false,
+      "about": {
+        "subject": "Mathematics",
+        "grade": 8
+      },
+      "metrics": {
+        "units": 5,
+        "lessons": 16,
+        "topics": 22
+      },
+      "classDetails": {
+        "name": "Mr. Frank's Class A",
+        "numberOfStudents": 44,
+        "durationDate": "14-Oct-2019 - 20-Oct-2020"
+      }
+    }
+]
