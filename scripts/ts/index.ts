@@ -1,18 +1,13 @@
-//types
-type DOMStructure = {
-    node:string;
-    children?:DOMStructure[];
-    text?:string;
-}
+// Elements
 
-//Functions
-function createElementWithAttributes(tag:keyof HTMLElementTagNameMap,attributes:{[key:string]:string} = {}) {
-    const element =  document.createElement(tag);
-
-    for(const [key,value] of Object.entries(attributes)){
-        element.setAttribute(key,value);
+const previewIcon = document.querySelector(".preview-icon");
+const passwordInput = document.querySelector('.login-card--password input') as HTMLInputElement
+// Actions
+previewIcon.addEventListener('click',() => {
+    if(passwordInput.type === 'password'){
+        passwordInput.type = 'text'
+        return
     }
 
-    return element
-}
-
+    passwordInput.type = 'password'
+})
